@@ -1,0 +1,47 @@
+// Jest Snapshot v1, https://goo.gl/fbAQLP
+
+exports[`the Blocks component should match the last snapshot with blocks 1`] = `
+<div
+  className="blocks"
+>
+  <Block
+    block={
+      Object {
+        "actions": 20,
+        "id": "06b570581dbc8cc398ac80b2dc98683701f1d7ef32dbabea4bfff7402ef436ee",
+        "timestamp": "2020-03-28T16:34:54.500",
+      }
+    }
+    blockIndex={0}
+    key="0"
+  />
+  <Block
+    block={
+      Object {
+        "actions": 17,
+        "id": "06b570581dbc8cc398ac80b2dc98683701f1d7ef32dbabea4bfff7402ef436e1",
+        "timestamp": "2020-03-28T16:34:54.500",
+      }
+    }
+    blockIndex={1}
+    key="1"
+  />
+  <Block
+    block={
+      Object {
+        "actions": 15,
+        "id": "06b570581dbc8cc398ac80b2dc98683701f1d7ef32dbabea4bfff7402ef436e2",
+        "timestamp": "2020-03-28T16:34:54.500",
+      }
+    }
+    blockIndex={2}
+    key="2"
+  />
+</div>
+`;
+
+exports[`the Blocks component should match the last snapshot without blocks 1`] = `
+<div
+  className="blocks"
+/>
+`;

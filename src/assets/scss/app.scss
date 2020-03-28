@@ -1,0 +1,31 @@
+.app {
+  background-image: linear-gradient(180deg, #232c45 3%, #141536 94%);
+  box-shadow: 0 48px 84px 0 rgba(2, 2, 5, 0.4);
+  border-radius: 10px;
+  padding-bottom: 20px;
+  transition: 0.3s all ease-in-out;
+  .header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 20px 40px 0px;
+    h1 {
+      // font-family: 'Circular Spotify Tx T';
+      font-weight: 100;
+      font-size: 45px;
+      color: #fff;
+    }
+  }
+}
+
+@media screen and (max-width: 992px) {
+  .app {
+    border-radius: 0;
+    .header {
+      padding: 0px 20px 0px;
+      h1 {
+        font-size: 28px;
+      }
+    }
+  }
+}

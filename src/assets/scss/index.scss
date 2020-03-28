@@ -1,0 +1,33 @@
+@import-normalize;
+
+body {
+  margin: 0;
+  font-family: 'Roboto Mono', monospace;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  background-image: linear-gradient(
+    225deg,
+    #ff9f4c 0%,
+    #d131a1 53%,
+    #7e24dd 100%
+  );
+  min-width: calc(100vw - 100px);
+  min-height: calc(100vh - 100px);
+  padding: 50px;
+}
+
+button {
+  font-family: 'Roboto', sans-serif;
+}
+
+div {
+  box-sizing: border-box;
+}
+
+@media screen and (max-width: 992px) {
+  body {
+    padding: 0px;
+    min-width: 100vw;
+    min-height: 100vh;
+  }
+}
