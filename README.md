@@ -18,6 +18,10 @@ On testing, I've written tests that encompass the tests that need to be done on 
 
 I haven't refactored the app styles, they were written hastily. I'd also like to further break down the block component. There is a sketch file where I quickly created a design, if you're interested. Typically I create react projects using typescript, in the interest of time, opted for just ES6.
 
+## Installation
+
+To install the project, you'll need a copy of [npm](https://nodejs.org/en/) or [yarn](https://classic.yarnpkg.com/en/). Simply `cd` into the root of the project `npm install` or `yarn install` and use the available scripts to run or build the project.
+
 ## Available Scripts
 
 In the project directory, you can run:
