@@ -20,7 +20,7 @@ I haven't refactored the app styles, they were written hastily. I'd also like to
 
 ## Installation
 
-To install the project, you'll need a copy of [npm](https://nodejs.org/en/) or [yarn](https://classic.yarnpkg.com/en/). Simply `cd` into the root of the project `npm install` or `yarn install` and use the available scripts to run or build the project.
+To install the project, you'll need a copy of [npm](https://nodejs.org/en/) or [yarn](https://classic.yarnpkg.com/en/). Simply `cd` into the root of the project `npm install` or `yarn install` and use the available scripts to run or build the project and you're good to go.
 
 ## Available Scripts
 
