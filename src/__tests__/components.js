@@ -56,11 +56,16 @@ describe('the Blocks component', () => {
     const wrapper = shallow(<Blocks blocks={blocks} />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
+  it('should match a snapshot with pacman if loading', () => {
+    const wrapper = shallow(<Blocks isLoading="true" />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
 });
 
 describe('the Block component', () => {
-  it('should match the last snapshot with a block', () => {
-    const wrapper = shallow(
+  let wrapper;
+  beforeEach(() => {
+    wrapper = shallow(
       <Block
         block={{
           id: 1,
@@ -74,6 +79,8 @@ describe('the Block component', () => {
         blockIndex="1"
       />
     );
+  });
+  it('should match the last snapshot with a block', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });

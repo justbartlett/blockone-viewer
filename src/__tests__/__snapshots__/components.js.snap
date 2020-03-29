@@ -264,6 +264,8 @@ exports[`the Block component should match the last snapshot with a block 1`] = `
 </div>
 `;
 
+exports[`the Blocks component should match a snapshot with pacman if loading 1`] = `<Pacman />`;
+
 exports[`the Blocks component should match the last snapshot with blocks 1`] = `
 <div
   className="blocks"
