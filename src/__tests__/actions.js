@@ -1,8 +1,15 @@
 import configureMockStore from 'redux-mock-store';
 import thunk from 'redux-thunk';
-import { fetchHeadBlock, fetchBlocks, fetchBlocksSucceeded } from '../actions';
+import {
+  fetchHeadBlockSucceeded,
+  fetchHeadBlockFailed,
+  fetchHeadBlockStarted,
+  fetchHeadBlock,
+  fetchBlocksFailed,
+  fetchBlocksStarted,
+  fetchBlocksSucceeded
+} from '../actions';
 import * as api from '../api';
-
 jest.unmock('../api');
 api.fetchHeadBlock = jest.fn(
   () => new Promise((resolve, reject) => resolve({ data: 'meh' }))
@@ -11,6 +18,28 @@ const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
 describe('action creators:', () => {
+  it('#fetchHeadBlockSucceeded', () => {
+    const expectedAction = {
+      type: 'FETCH_HEAD_BLOCK_SUCCEEDED'
+    };
+    expect(fetchHeadBlockSucceeded()).toEqual(expectedAction);
+  });
+  it('#fetchHeadBlockStarted', () => {
+    const expectedAction = {
+      type: 'FETCH_HEAD_BLOCK_STARTED'
+    };
+    expect(fetchHeadBlockStarted()).toEqual(expectedAction);
+  });
+  it('#fetchHeadBlockFailed', () => {
+    const error = 'This is an error message';
+    const expectedAction = {
+      type: 'FETCH_HEAD_BLOCK_FAILED',
+      payload: {
+        error
+      }
+    };
+    expect(fetchHeadBlockFailed(error)).toEqual(expectedAction);
+  });
   it('#fetchBlocksSucceeded', () => {
     const blocks = {
       id: '06b570581dbc8cc398ac80b2dc98683701f1d7ef32dbabea4bfff7402ef436ee',
@@ -40,5 +69,21 @@ describe('action creators:', () => {
       expect(store.getActions()).toEqual(expectedActions);
       expect(api.fetchHeadBlock).toHaveBeenCalled();
     });
+  });
+  it('#fetchBlocksFailed', () => {
+    const error = 'This is an error message';
+    const expectedAction = {
+      type: 'FETCH_BLOCKS_FAILED',
+      payload: {
+        error
+      }
+    };
+    expect(fetchBlocksFailed(error)).toEqual(expectedAction);
+  });
+  it('#fetchBlocksStarted', () => {
+    const expectedAction = {
+      type: 'FETCH_BLOCKS_STARTED'
+    };
+    expect(fetchBlocksStarted()).toEqual(expectedAction);
   });
 });

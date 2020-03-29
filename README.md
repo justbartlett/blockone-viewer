@@ -4,7 +4,7 @@ Full readme forthcoming. Live project: [https://admiring-kare-60e432.netlify.com
 
 This Blockchain viewer shows a list of the most recent blocks from the EOSIO blockchain. When a user clicks the 'LOAD' button the 10 most recent blocks are updated. Block entries show the hash of the block, its timestamp, and the count of actions included in that block. Clicking a block entry smoothly expands to show the contents of the block output.
 
-It is built using React, and utilizes hooks for local state and Redux for state management. I took a pretty simplistic approach and opted to use Thunks to handle asychronous actions, however the same could easily be accomplished with a Saga. Redux feels a bit like overkill on this project, and Sagas moreso. 
+It is built using React, and utilizes hooks for local state and Redux for state management. I took a pretty simplistic approach and opted to use Thunks to handle asychronous actions.
 
 ### Project Structure
 
@@ -12,11 +12,7 @@ I opted to follow the 'Rails-style' pattern in structuring the project due to it
 
 ### Remaining Iotas
 
-There's more I'd like to tackle on this project, however, being under the weather I wanted to share where I'm at now. Kindly let me know if there is refactoring, additional testing, or additional features you'd like to see & I ought to prioritize.
-
-On testing, I've written tests that encompass the tests that need to be done on each facet of the app, however the menial copy pasta'ing / rinse repeating to achieve a high level of coverage I have not done (yet). For example in `__tests__/reducers.js` there are tests for `FETCH_BLOCKS_STARTED` and `FETCH_BLOCKS_SUCCEEDED`, would simply need to copy-paste and replace with `FETCH_HEAD_BLOCK_STARTED`, et. al.
-
-I haven't refactored the app styles, they were written hastily. I'd also like to further break down the block component. There is a sketch file where I quickly created a design, if you're interested. Typically I create react projects using typescript, in the interest of time, opted for just ES6.
+There's more I'd like to tackle on this project, more robust tewting, I haven't refactored the app styles, breaking down the block component, using typescript throughout.
 
 ## Installation
 
