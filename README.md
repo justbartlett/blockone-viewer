@@ -12,7 +12,7 @@ I opted to follow the 'Rails-style' pattern in structuring the project due to it
 
 ### Remaining Iotas
 
-There's more I'd like to tackle on this project, more robust tewting, I haven't refactored the app styles, breaking down the block component, using typescript throughout.
+More tests being written, I haven't refactored the app styles, breaking down the block component, using typescript throughout.
 
 ## Installation
 
@@ -21,6 +21,10 @@ To install the project, you'll need a copy of [npm](https://nodejs.org/en/) or [
 ## Available Scripts
 
 In the project directory, you can run:
+
+### `npm run coverage`
+
+Runs the tests and gives a coverage report
 
 ### `yarn start`
 
