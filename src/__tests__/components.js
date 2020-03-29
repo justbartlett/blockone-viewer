@@ -1,8 +1,11 @@
 import React from 'react';
 import Enzyme, { shallow } from 'enzyme';
 import Blocks from '../components/blocks';
+import Block from '../components/block';
 import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
+import Pacman from '../components/pacman';
+import ErrorMessage from '../components/errorMessage';
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -51,6 +54,40 @@ describe('the Blocks component', () => {
       }
     ];
     const wrapper = shallow(<Blocks blocks={blocks} />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+});
+
+describe('the Block component', () => {
+  it('should match the last snapshot with a block', () => {
+    const wrapper = shallow(
+      <Block
+        block={{
+          id: 1,
+          timestamp: '1',
+          transactions: [
+            {
+              trx: [{ id: 1 }]
+            }
+          ]
+        }}
+        blockIndex="1"
+      />
+    );
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+});
+
+describe('the Pacman component', () => {
+  it('should match the last Pacman snapshot', () => {
+    const wrapper = shallow(<Pacman />);
+    expect(toJson(wrapper)).toMatchSnapshot();
+  });
+});
+
+describe('the ErrorMessage component', () => {
+  it('should match the last ErrorMessage snapshot', () => {
+    const wrapper = shallow(<ErrorMessage message="oh no, error" />);
     expect(toJson(wrapper)).toMatchSnapshot();
   });
 });
