@@ -14,6 +14,12 @@ Follows the 'Rails-style' pattern in structuring the project due to its simplici
 
 ![Image of Code Coverage](https://i.ibb.co/dj99L1Q/coverage.png)
 
+### Debugging
+
+For a lovely debugging experience I suggest grabbing a copy of [Redux DevTools](https://chrome.google.com/webstore/detail/redux-devtools/lmhkpmbekcpmknklioeibfkpmmfibljd?hl=en)
+
+![Image of DevTools Extension](https://i.ibb.co/2npnv2c/redux-devtools.png)
+
 ### Remaining Iotas / Next Steps
 
 Building on this project further, I'd next break down the block component, and go through and refactor the styles throughout the app. There are a few Redux related minor performance optimizations I could implement. I could strongly type the app using TypeScript.
