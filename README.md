@@ -12,7 +12,7 @@ Follows the 'Rails-style' pattern in structuring the project due to its simplici
 
 ### Code Coverage @100%!
 
-![Image of Code Coverage](https://raw.githubusercontent.com/justbartlett/blockone-viewer/master/coverage.png)
+![Image of Code Coverage](https://i.ibb.co/dj99L1Q/coverage.png)
 
 ### Remaining Iotas / Next Steps
 
