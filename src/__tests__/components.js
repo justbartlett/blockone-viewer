@@ -6,7 +6,6 @@ import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 import Pacman from '../components/pacman';
 import ErrorMessage from '../components/errorMessage';
-import sinon from 'sinon';
 
 /*  getting an odd
     console.error node_modules/react-dom/cjs/react-dom.development.js:88
