@@ -129,20 +129,20 @@ const Block = props => {
         </div>
         <Ripple style={{ width: '100%', display: 'block' }}>
           <button onClick={toggleAccordion} className="block-button">
-            <div
-              className={`text ${
+            <span
+              className={`text-less ${
                 isAccordionExpanded === true ? 'active' : 'disabled'
               } `}
             >
               Less
-            </div>
-            <div
-              className={`text ${
+            </span>
+            <span
+              className={`text-details ${
                 isAccordionExpanded === false ? 'active' : 'disabled'
-              } `}
+              }`}
             >
               Details
-            </div>
+            </span>
           </button>
         </Ripple>
       </div>

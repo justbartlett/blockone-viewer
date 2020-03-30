@@ -1,11 +1,27 @@
 import React from 'react';
-import Enzyme, { shallow } from 'enzyme';
+import Enzyme, { shallow, mount } from 'enzyme';
 import Blocks from '../components/blocks';
 import Block from '../components/block';
 import toJson from 'enzyme-to-json';
 import Adapter from 'enzyme-adapter-react-16';
 import Pacman from '../components/pacman';
 import ErrorMessage from '../components/errorMessage';
+import sinon from 'sinon';
+
+/*  getting an odd
+    console.error node_modules/react-dom/cjs/react-dom.development.js:88
+    Warning: `NaN` is an invalid value for the `left` css style property.
+    in span
+    so supressing the warning
+*/
+
+const originalError = console.error;
+beforeAll(() => {
+  console.error = jest.fn();
+});
+afterAll(() => {
+  console.error = originalError;
+});
 
 Enzyme.configure({ adapter: new Adapter() });
 
@@ -65,7 +81,7 @@ describe('the Blocks component', () => {
 describe('the Block component', () => {
   let wrapper;
   beforeEach(() => {
-    wrapper = shallow(
+    wrapper = mount(
       <Block
         block={{
           id: 1,
@@ -82,6 +98,12 @@ describe('the Block component', () => {
   });
   it('should match the last snapshot with a block', () => {
     expect(toJson(wrapper)).toMatchSnapshot();
+  });
+  it('should toggle the accordion text', () => {
+    expect(wrapper.find('.text-less.disabled').length).toEqual(1);
+    const button = wrapper.find('button');
+    button.simulate('click');
+    expect(wrapper.find('.text-less.active').length).toEqual(1);
   });
 });
 
