@@ -63,7 +63,7 @@ export function fetchBlocksStarted() {
 export function fetchBlocks(id) {
   return dispatch => {
     dispatch(fetchBlocksStarted());
-    api
+    return api
       .fetchBlocks(id, 10)
       .then(resp => {
         dispatch(fetchBlocksSucceeded(resp));

@@ -5,15 +5,13 @@ import {
   fetchHeadBlockFailed,
   fetchHeadBlockStarted,
   fetchHeadBlock,
+  fetchBlocks,
   fetchBlocksFailed,
   fetchBlocksStarted,
   fetchBlocksSucceeded
 } from '../actions';
 import * as api from '../api';
 jest.unmock('../api');
-api.fetchHeadBlock = jest.fn(
-  () => new Promise((resolve, reject) => resolve({ data: 'meh' }))
-);
 const middlewares = [thunk];
 const mockStore = configureMockStore(middlewares);
 
@@ -55,6 +53,9 @@ describe('action creators:', () => {
     expect(fetchBlocksSucceeded(blocks)).toEqual(expectedAction);
   });
   it('#fetchHeadBlock', () => {
+    api.fetchHeadBlock = jest.fn(
+      () => new Promise((resolve, reject) => resolve({ data: 'meh' }))
+    );
     const expectedActions = [
       { type: 'FETCH_HEAD_BLOCK_STARTED' },
       { type: 'FETCH_HEAD_BLOCK_SUCCEEDED' },
@@ -85,5 +86,23 @@ describe('action creators:', () => {
       type: 'FETCH_BLOCKS_STARTED'
     };
     expect(fetchBlocksStarted()).toEqual(expectedAction);
+  });
+  it('#fetchBlocks', () => {
+    api.fetchBlocks = jest.fn(
+      () => new Promise((resolve, reject) => resolve([{ data: 'meh' }]))
+    );
+    const expectedActions = [
+      { type: 'FETCH_BLOCKS_STARTED' },
+      { type: 'FETCH_BLOCKS_SUCCEEDED', payload: { blocks: [{ data: 'meh' }] } }
+    ];
+    const store = mockStore({
+      blocks: {
+        items: []
+      }
+    });
+    return store.dispatch(fetchBlocks({})).then(() => {
+      expect(store.getActions()).toEqual(expectedActions);
+      expect(api.fetchBlocks).toHaveBeenCalled();
+    });
   });
 });
