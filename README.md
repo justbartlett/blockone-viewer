@@ -14,9 +14,9 @@ Follows the 'Rails-style' pattern in structuring the project due to its simplici
 
 ![Image of Code Coverage](https://raw.githubusercontent.com/justbartlett/blockone-viewer/master/coverage.png)
 
-### Remaining Iotas
+### Remaining Iotas / Next Steps
 
-I haven't yet refactored the app styles or broken down the block component.
+Building on this project further, I'd next break down the block component, and go through and refactor the styles throughout the app. There are a few Redux related minor performance optimizations I could implement. I could strongly type the app using TypeScript.
 
 ## Installation
 
