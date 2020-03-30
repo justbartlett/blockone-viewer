@@ -1,34 +1,69 @@
 // Jest Snapshot v1, https://goo.gl/fbAQLP
 
 exports[`the Block component should match the last snapshot with a block 1`] = `
-<Block
-  block={
+<div
+  className="block"
+  style={
     Object {
-      "id": 1,
-      "timestamp": "1",
-      "transactions": Array [
-        Object {
-          "trx": Array [
-            Object {
-              "id": 1,
-            },
-          ],
-        },
-      ],
+      "animationDelay": "0.05s",
     }
   }
-  blockIndex="1"
 >
   <div
-    className="block"
-    style={
-      Object {
-        "animationDelay": "0.05s",
-      }
-    }
+    className="block-wrapper"
   >
     <div
-      className="block-wrapper"
+      className="block-item"
+      key="0"
+    >
+      <div
+        className="block-item-label"
+      >
+        id
+      </div>
+      <div
+        className="block-item-value"
+      >
+        1
+      </div>
+    </div>
+    <div
+      className="block-item"
+      key="1"
+    >
+      <div
+        className="block-item-label"
+      >
+        timestamp
+      </div>
+      <div
+        className="block-item-value"
+      >
+        1
+      </div>
+    </div>
+    <div
+      className="block-item"
+      key="2"
+    >
+      <div
+        className="block-item-label"
+      >
+        actions
+      </div>
+      <div
+        className="block-item-value"
+      >
+        1
+      </div>
+    </div>
+    <div
+      className="block-content"
+      style={
+        Object {
+          "maxHeight": "0",
+        }
+      }
     >
       <div
         className="block-item"
@@ -37,13 +72,11 @@ exports[`the Block component should match the last snapshot with a block 1`] = `
         <div
           className="block-item-label"
         >
-          id
+          block #
         </div>
         <div
           className="block-item-value"
-        >
-          1
-        </div>
+        />
       </div>
       <div
         className="block-item"
@@ -52,13 +85,11 @@ exports[`the Block component should match the last snapshot with a block 1`] = `
         <div
           className="block-item-label"
         >
-          timestamp
+          producer
         </div>
         <div
           className="block-item-value"
-        >
-          1
-        </div>
+        />
       </div>
       <div
         className="block-item"
@@ -67,232 +98,170 @@ exports[`the Block component should match the last snapshot with a block 1`] = `
         <div
           className="block-item-label"
         >
-          actions
+          confirmed
         </div>
         <div
           className="block-item-value"
-        >
-          1
-        </div>
+        />
       </div>
       <div
-        className="block-content"
-        style={
-          Object {
-            "maxHeight": "0",
-          }
-        }
+        className="block-item"
+        key="3"
       >
         <div
-          className="block-item"
+          className="block-item-label"
+        >
+          previous
+        </div>
+        <div
+          className="block-item-value"
+        />
+      </div>
+      <div
+        className="block-item"
+        key="4"
+      >
+        <div
+          className="block-item-label"
+        >
+          transaction merkle root
+        </div>
+        <div
+          className="block-item-value"
+        />
+      </div>
+      <div
+        className="block-item"
+        key="5"
+      >
+        <div
+          className="block-item-label"
+        >
+          action merkle root
+        </div>
+        <div
+          className="block-item-value"
+        />
+      </div>
+      <div
+        className="block-item"
+        key="6"
+      >
+        <div
+          className="block-item-label"
+        >
+          schedule version
+        </div>
+        <div
+          className="block-item-value"
+        />
+      </div>
+      <div
+        className="block-item"
+        key="7"
+      >
+        <div
+          className="block-item-label"
+        >
+          new producers
+        </div>
+        <div
+          className="block-item-value"
+        />
+      </div>
+      <div
+        className="block-item"
+        key="8"
+      >
+        <div
+          className="block-item-label"
+        >
+          producer signature
+        </div>
+        <div
+          className="block-item-value"
+        />
+      </div>
+      <div
+        className="block-transactions"
+      >
+        <div
+          className="block-transaction-row"
+        >
+          <div
+            className="block-transaction-col-large label"
+          >
+            Transactions - ID
+          </div>
+          <div
+            className="block-transaction-col label"
+          >
+            Status
+          </div>
+          <div
+            className="block-transaction-col label"
+          >
+            CPU Usage
+          </div>
+          <div
+            className="block-transaction-col label"
+          >
+            NET Usage
+          </div>
+          <div
+            className="block-transaction-col label"
+          >
+            Actions
+          </div>
+        </div>
+        <div
+          className="block-transaction-row"
           key="0"
         >
           <div
-            className="block-item-label"
-          >
-            block #
-          </div>
-          <div
-            className="block-item-value"
+            className="block-transaction-col-large"
           />
-        </div>
-        <div
-          className="block-item"
-          key="1"
-        >
           <div
-            className="block-item-label"
-          >
-            producer
-          </div>
-          <div
-            className="block-item-value"
+            className="block-transaction-col"
           />
-        </div>
-        <div
-          className="block-item"
-          key="2"
-        >
           <div
-            className="block-item-label"
-          >
-            confirmed
-          </div>
-          <div
-            className="block-item-value"
+            className="block-transaction-col"
           />
-        </div>
-        <div
-          className="block-item"
-          key="3"
-        >
           <div
-            className="block-item-label"
-          >
-            previous
-          </div>
-          <div
-            className="block-item-value"
+            className="block-transaction-col"
           />
-        </div>
-        <div
-          className="block-item"
-          key="4"
-        >
           <div
-            className="block-item-label"
-          >
-            transaction merkle root
-          </div>
-          <div
-            className="block-item-value"
+            className="block-transaction-col"
           />
-        </div>
-        <div
-          className="block-item"
-          key="5"
-        >
-          <div
-            className="block-item-label"
-          >
-            action merkle root
-          </div>
-          <div
-            className="block-item-value"
-          />
-        </div>
-        <div
-          className="block-item"
-          key="6"
-        >
-          <div
-            className="block-item-label"
-          >
-            schedule version
-          </div>
-          <div
-            className="block-item-value"
-          />
-        </div>
-        <div
-          className="block-item"
-          key="7"
-        >
-          <div
-            className="block-item-label"
-          >
-            new producers
-          </div>
-          <div
-            className="block-item-value"
-          />
-        </div>
-        <div
-          className="block-item"
-          key="8"
-        >
-          <div
-            className="block-item-label"
-          >
-            producer signature
-          </div>
-          <div
-            className="block-item-value"
-          />
-        </div>
-        <div
-          className="block-transactions"
-        >
-          <div
-            className="block-transaction-row"
-          >
-            <div
-              className="block-transaction-col-large label"
-            >
-              Transactions - ID
-            </div>
-            <div
-              className="block-transaction-col label"
-            >
-              Status
-            </div>
-            <div
-              className="block-transaction-col label"
-            >
-              CPU Usage
-            </div>
-            <div
-              className="block-transaction-col label"
-            >
-              NET Usage
-            </div>
-            <div
-              className="block-transaction-col label"
-            >
-              Actions
-            </div>
-          </div>
-          <div
-            className="block-transaction-row"
-            key="0"
-          >
-            <div
-              className="block-transaction-col-large"
-            />
-            <div
-              className="block-transaction-col"
-            />
-            <div
-              className="block-transaction-col"
-            />
-            <div
-              className="block-transaction-col"
-            />
-            <div
-              className="block-transaction-col"
-            />
-          </div>
         </div>
       </div>
-      <Ripple
-        style={
-          Object {
-            "display": "block",
-            "width": "100%",
-          }
+    </div>
+    <Ripple
+      style={
+        Object {
+          "display": "block",
+          "width": "100%",
         }
+      }
+    >
+      <button
+        className="block-button"
+        onClick={[Function]}
       >
         <div
-          className="rippleContainer"
-          onClick={[Function]}
-          style={
-            Object {
-              "display": "block",
-              "width": "100%",
-            }
-          }
+          className="text disabled "
         >
-          <button
-            className="block-button"
-            onClick={[Function]}
-          >
-            <div
-              className="text disabled "
-            >
-              Less
-            </div>
-            <div
-              className="text active "
-            >
-              Details
-            </div>
-          </button>
-          <span />
+          Less
         </div>
-      </Ripple>
-    </div>
+        <div
+          className="text active "
+        >
+          Details
+        </div>
+      </button>
+    </Ripple>
   </div>
-</Block>
+</div>
 `;
 
 exports[`the Blocks component should match a snapshot with pacman if loading 1`] = `<Pacman />`;
