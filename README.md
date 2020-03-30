@@ -10,9 +10,13 @@ It is built using React, and utilizes hooks for local state and Redux for state 
 
 I opted to follow the 'Rails-style' pattern in structuring the project due to its simplicity. In enterprise projects I prefer to follow a feature based approach, however in following this structure, I find no explanation is required when a new Redux-familiar developer dives in; the actions are in the actions directory. The con of course to this approach on large projects is scalability.
 
+### Code Coverage @100%!
+
+![Image of Code Coverage](https://raw.githubusercontent.com/justbartlett/blockone-viewer/master/coverage.png)
+
 ### Remaining Iotas
 
-More tests being written, I haven't refactored the app styles, breaking down the block component, using typescript throughout.
+I haven't refactored the app styles, breaking down the block component, using typescript throughout.
 
 ## Installation
 
