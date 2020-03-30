@@ -16,7 +16,7 @@ Follows the 'Rails-style' pattern in structuring the project due to its simplici
 
 ### Remaining Iotas
 
-I haven't refactored the app styles, breaking down the block component, using typescript throughout.
+I haven't yet refactored the app styles or broken down the block component.
 
 ## Installation
 
