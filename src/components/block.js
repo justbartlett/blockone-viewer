@@ -3,16 +3,12 @@ import Ripple from 'react-material-ripple';
 import '../assets/scss/block.scss';
 
 const Block = props => {
-  const [setActive, setActiveState] = useState('');
-  const [setHeight, setHeightState] = useState('0px');
+  const [isAccordionExpanded, setIsAccordionExpanded] = useState(false);
 
   const content = useRef(null);
 
   const toggleAccordion = () => {
-    setActiveState(setActive === '' ? 'active' : '');
-    setHeightState(
-      setActive === 'active' ? '0px' : `${content.current.scrollHeight}px`
-    );
+    setIsAccordionExpanded(!isAccordionExpanded);
   };
 
   const topBlock = [
@@ -83,7 +79,11 @@ const Block = props => {
         ))}
         <div
           ref={content}
-          style={{ maxHeight: `${setHeight}` }}
+          style={{
+            maxHeight: `${
+              isAccordionExpanded ? `${content.current?.scrollHeight}px` : '0'
+            }`
+          }}
           className="block-content"
         >
           {midBlock.map((block, index) => (
@@ -131,13 +131,15 @@ const Block = props => {
           <button onClick={toggleAccordion} className="block-button">
             <div
               className={`text ${
-                setActive === 'active' ? 'active' : 'disabled'
+                isAccordionExpanded === true ? 'active' : 'disabled'
               } `}
             >
               Less
             </div>
             <div
-              className={`text ${setActive === '' ? 'active' : 'disabled'} `}
+              className={`text ${
+                isAccordionExpanded === false ? 'active' : 'disabled'
+              } `}
             >
               Details
             </div>
